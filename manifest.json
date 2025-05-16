@@ -9,9 +9,6 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "host_permissions": [
-    "https://*/*"
-  ],
   "author": "Daniel Gonzalez Adarve",
   "update_url": "https://clients2.google.com/service/update2/crx",
   "permissions": [
