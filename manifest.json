@@ -1,8 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Gemini™ Side Panel",
+  "name": "Gemini Side Panel",
+  "description": "Gemini Side Panel is a simple Chrome extension that allows you to open Gemini™ in a side panel.",
   "version": "1.0.0",
-  "description": "Gemini™ Side Panel is a simple Chrome extension that allows you to open Gemini™ in a side panel.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "author": "Daniel Gonzalez Adarve",
   "update_url": "https://clients2.google.com/service/update2/crx",
   "permissions": [
     "sidePanel",
@@ -13,30 +23,33 @@
   "side_panel": {
     "default_path": "sidepanel.html"
   },
+  "commands":
+  {
+    "_execute_action":
+    {
+      "suggested_key":
+      {
+        "default": "Alt+G",
+        "windows": "Alt+G",
+        "mac": "Alt+G",
+        "chromeos": "Alt+G",
+        "linux": "Alt+G"
+      },
+      "description": "Press Alt + G to open Gemini™"
+    }
+  },
   "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
     "default_title": "Open Gemini in Side Panel"
   },
   "background": {
     "service_worker": "js/worker.js"
   },
-  "context_security_policy": {
-    "extension_pages": "font-src 'self'; script-src 'self'; object-src 'self'; worker-src 'self'",
-    "content_scripts": "font-src 'self'; script-src 'self'; object-src 'self'; worker-src 'self'"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "js/all.js"
-      ],
-      "css": [
-        "all.css"
-      ],
-      "run_at": "document_idle"
-    }
-  ],
   "web_accessible_resources": [
     {
       "resources": [
@@ -54,31 +67,21 @@
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "gemini-rule",
+        "id": "ruleset_1",
         "enabled": true,
         "path": "rules/gemini-modify-headers.json"
       },
       {
-          "id": "google-rule",
+          "id": "ruleset_2",
           "enabled": true,
           "path": "rules/google-modify-headers.json"
       },
       {
-          "id": "ogs-rule",
+          "id": "ruleset_3",
           "enabled": true,
           "path": "rules/ogs-modify-headers.json"
       }
     ]
   },
-  "host_permissions": [
-    "https://*/*"
-  ],
-  "offline_enabled": true,
-  "author": "Daniel Gonzalez Adarve",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "minimum_chrome_version": "130"
+  "minimum_chrome_version": "114"
 }

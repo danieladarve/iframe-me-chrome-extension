@@ -10,7 +10,7 @@ function createMenu()
 
 function onInstalledReason(data)
 {
-    if (data.reason === chrome.runtime.OnInstallReason.INSTALL) {
+    if (data.reason === chrome.runtime.OnInstalledReason.INSTALL) {
         var url = `https://chrome.google.com/webstore/detail/${chrome.runtime.id}/support`;
         chrome.runtime.setUninstallURL(url);
     }

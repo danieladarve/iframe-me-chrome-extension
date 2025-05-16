@@ -2,5 +2,5 @@
 chrome.runtime.onInstalled.addListener(onInstalledReason);
 // Listen for context menu click
 chrome.contextMenus.onClicked.addListener(contextMenuClick);
-chrome.sidePanel.setPanelBehaviour({ openPanelOnActionClick: true }).catch(console.error);chrome.
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(console.error);
 chrome.runtime.onMessage.addListener(onMessage)
