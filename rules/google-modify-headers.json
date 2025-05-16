@@ -1,0 +1,297 @@
+[
+  {
+    "id": 21,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Access-Control-Allow-Origin",
+          "operation": "set",
+          "value": "*"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Security-Policy",
+          "operation": "set",
+          "value": "default-src * 'unsafe-inline' 'unsafe-eval' 'unsafe-hashes' data: blob:"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-Frame-Options",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Cross-Origin-Resource-Policy",
+          "operation": "set",
+          "value": "cross-origin"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Cross-Origin-Opener-Policy",
+          "operation": "set",
+          "value": "unsafe-none"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-Content-Type-Options",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "X-XSS-Protection",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Access-Control-Allow-Headers",
+          "operation": "set",
+          "value": "*"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Access-Control-Allow-Credentials",
+          "operation": "set",
+          "value": "true"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Access-Control-Allow-Methods",
+          "operation": "set",
+          "value": "*"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Referrer-Policy",
+          "operation": "set",
+          "value": "same-origin"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Permissions-Policy",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Cross-Origin-Embedder-Policy",
+          "operation": "set",
+          "value": "unsafe-none"
+        }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://accounts.google.com*",
+      "initiatorDomains": [
+        "gemini.google.com"
+      ],
+      "resourceTypes": [
+        "sub_frame"
+      ]
+    }
+  }
+]

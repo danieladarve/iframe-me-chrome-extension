@@ -1,0 +1,84 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini™ Side Panel",
+  "version": "1.0.0",
+  "description": "Gemini™ Side Panel is a simple Chrome extension that allows you to open Gemini™ in a side panel.",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "permissions": [
+    "sidePanel",
+    "background",
+    "contextMenus",
+    "declarativeNetRequest"
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Gemini in Side Panel"
+  },
+  "background": {
+    "service_worker": "js/worker.js"
+  },
+  "context_security_policy": {
+    "extension_pages": "font-src 'self'; script-src 'self'; object-src 'self'; worker-src 'self'",
+    "content_scripts": "font-src 'self'; script-src 'self'; object-src 'self'; worker-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/all.js"
+      ],
+      "css": [
+        "all.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "all_frames": true,
+      "extension_ids": [
+        "*"
+      ]
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "gemini-rule",
+        "enabled": true,
+        "path": "rules/gemini-modify-headers.json"
+      },
+      {
+          "id": "google-rule",
+          "enabled": true,
+          "path": "rules/google-modify-headers.json"
+      },
+      {
+          "id": "ogs-rule",
+          "enabled": true,
+          "path": "rules/ogs-modify-headers.json"
+      }
+    ]
+  },
+  "host_permissions": [
+    "https://*/*"
+  ],
+  "offline_enabled": true,
+  "author": "Daniel Gonzalez Adarve",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "minimum_chrome_version": "130"
+}
