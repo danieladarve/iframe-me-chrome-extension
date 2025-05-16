@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Gemini Side Panel",
-  "description": "Gemini Side Panel is a simple Chrome extension that allows you to open Gemini™ in a side panel.",
+  "name": "Gemini™ Side Panel",
+  "description": "Gemini™ Side Panel is a simple Chrome extension that allows you to open Gemini™ in a side panel.",
   "version": "1.0.0",
   "icons": {
     "16": "icons/icon16.png",
@@ -16,27 +16,10 @@
   "update_url": "https://clients2.google.com/service/update2/crx",
   "permissions": [
     "sidePanel",
-    "background",
-    "contextMenus",
     "declarativeNetRequest"
   ],
   "side_panel": {
     "default_path": "sidepanel.html"
-  },
-  "commands":
-  {
-    "_execute_action":
-    {
-      "suggested_key":
-      {
-        "default": "Alt+G",
-        "windows": "Alt+G",
-        "mac": "Alt+G",
-        "chromeos": "Alt+G",
-        "linux": "Alt+G"
-      },
-      "description": "Press Alt + G to open Gemini™"
-    }
   },
   "action": {
     "default_icon": {
@@ -45,7 +28,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "Open Gemini in Side Panel"
+    "default_title": "Open Gemini™ in Side Panel"
   },
   "background": {
     "service_worker": "js/worker.js"

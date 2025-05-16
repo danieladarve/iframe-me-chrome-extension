@@ -5,35 +5,6 @@
     <meta http-equiv="Cache-control" content="public">
     <meta charset="UTF-8">
     <title>Gemini Side Panel</title>
-    <style>
-      html {
-        position: relative
-      }
-      body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden; /* Prevent scrollbars on the body if iframe fits perfectly */
-        font-family: Arial, sans-serif; /* A common sans-serif font */
-      }
-      body {
-        height: 100vh;
-      }
-      #gemini-iframe {
-        width: -webkit-fill-available;
-        width: 100%;
-        height: 100vh;
-        min-width: 300px;
-        border: none;
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2000;
-      }
-    </style>
 </head>
 <body>
 <iframe id="gemini-iframe" src="https://gemini.google.com/" frameborder="0" noresize="noresize" crossorigin="anonymous" allow="clipboard-read; clipboard-write; fullscreen; geolocation; web-share; picture-in-picture; publickey-credentials-get; autoplay; encrypted-media; identity-credentials-get;"></iframe>
