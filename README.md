@@ -18,7 +18,6 @@ This extension requests the following permissions:
 
 ## Development
 - Main logic is in `js/worker.js` and `js/worker/`.
-- Header modification rules are in the `rules/` directory.
 - The side panel UI is defined in `sidepanel.html`.
 
 ## Privacy
